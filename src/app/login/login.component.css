@@ -1,0 +1,78 @@
+/*===============custom=================*/
+.container {
+    display: block;
+}
+
+.placHolder {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #ffffff;
+    border: 1px solid #4d1c8a;
+    color: #4d1c8a;
+    padding: 5px 30px;
+	border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #4d1c8a;
+    border: 1px solid #4d1c8a;
+    color: white;
+}
+
+.logo {
+    background: url("../../assets/images/logo.png") repeat-y;
+    width: 159px;
+    height: 106px;
+    margin: 0 auto;
+}
+
+.backgroundLoginImage {
+    background-image: url("../../assets/images/cotyDesktopBanner_bg.jpg"); 
+}
+
+/*===============Login page=================*/
+.login {
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+}
+
+.loginHeader {
+	margin-bottom: 20px; 
+	font-size: 18px; 
+    color: #4d1c8a;
+    font-weight: bold;
+}
+
+.marTop20px {
+    margin-top: 20px;
+}
+
+/*===============Header=================*/
+.topBoxShadow {
+	box-shadow: 0px 4px 4px #D1D1D1;
+    margin-top: 11px;
+}
+
+.topHeaderUST {
+    background: url("../../assets/images/loginHeader.png") repeat-y;
+    width: 550px;
+    height: 54px;
+    margin: 0 auto;
+}
+
+.headerBottomStrip {
+    background: url("../../assets/images/headerBottomStrip.png") repeat-y;
+    width: 1095px;
+    height: 26px;
+    margin: 0 auto;
+}

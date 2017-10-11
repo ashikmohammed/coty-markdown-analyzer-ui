@@ -1,0 +1,36 @@
+.MDcontainer {
+    background-color: #4d1c8a; 
+    height: 500px; 
+    color: #ffffff;
+}
+.title {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 70px;
+}
+.sub-title {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.MDcontainer ul li {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.bell {
+    background: url("../../assets/images/bell.png") repeat-y;
+    width: 44px;
+    height: 51px;
+    margin: 0 auto;
+}
+
+.startBtn {
+    margin: 0 auto;
+    color: #ffffff;
+    background-color: #4d1c8a;
+    padding: 10px 30px;
+}
+

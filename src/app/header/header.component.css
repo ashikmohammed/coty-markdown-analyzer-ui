@@ -1,0 +1,66 @@
+/*===============Header=================*/
+.topBoxShadow {
+	box-shadow: 0px 4px 4px #D1D1D1;
+    margin-top: 11px;
+}
+
+.topHeaderUST {
+    width: 100%;
+}
+
+.headerBottomStrip {
+    background: url("../../assets/images/headerBottomStrip.png") repeat-y;
+    width: 1095px;
+    height: 26px;
+    margin: 0 auto;
+}
+
+.headerLeft {
+    background: url("../../assets/images/headerLogo.png") repeat-y;
+    width: 30%;
+    height: 60px;
+    float: left;
+}
+
+.headerCenter {
+    background: url("../../assets/images/loginHeader.png") repeat-y;
+    width: 550px;
+    height: 54px;
+    margin: 0 auto;
+    float: left;
+}
+
+.headerRight {
+    height: 55px;
+    padding-top: 5px;
+}
+
+.divHamburger {
+    width: 25px;
+    height: 2px;
+    background-color: #6D449F;
+    margin: 6px 0;
+}
+
+.bell {
+    background: url("../../assets/images/bell.png") repeat-y;
+    width: 44px;
+    height: 51px;
+}
+
+.email {
+    background: url("../../assets/images/email.png") repeat-y;
+    width: 49px;
+    height: 48px;
+    margin: 0px 20px;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 3px solid #6D449F;
+  width: 40px;
+  height: 40px; 
+  margin-top: 10px;
+  margin-right: 10px;
+}
+

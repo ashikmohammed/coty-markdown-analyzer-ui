@@ -1,0 +1,36 @@
+<div class="topHeaderUST"></div>
+<div class="headerBottomStrip"></div>
+<div class="topBoxShadow">&nbsp;</div>
+<div class="container backgroundLoginImage00" class="marTop20px">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="container">
+			  <div class="logo"></div>
+			  <form class="login" [formGroup]="userForm" (submit)="redirectToDashboard()">
+                <div >
+                    <div class="loginHeader">Please use your credentials to login</div>
+                    <div class="placHolder">
+                        <input id="userName" formControlName="userName" placeholder="User Id">
+                        <span class="highlight"></span>
+                        <span class="inputBottomBar"></span>
+                        <control-messages [control]="userForm.controls.userName"></control-messages>
+                    </div>
+
+                    <div class="placHolder">
+                        <input id="password" type="password" formControlName="password" placeholder="Password">
+                        <span class="highlight"></span>
+                        <span class="inputBottomBar"></span>
+                        <control-messages [control]="userForm.controls.password"></control-messages>
+                    </div>
+                </div>
+				
+				<div class="floatLeft">   
+                  <button class="button" (click)="reset()">Reset</button>
+                  <button type="submit" class="button" [disabled]="!userForm.valid">Login</button>
+				</div>
+              </form>
+			</div>
+        </div>
+    </div>
+</div>
+                         

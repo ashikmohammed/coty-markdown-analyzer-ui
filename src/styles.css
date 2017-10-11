@@ -1,0 +1,101 @@
+/*===============Layout=================*/
+body {
+	font-family: 'Arial';
+} 
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 small {
+    font-weight: normal;
+    color: #888;
+    display: block;
+}
+
+a {
+    cursor: pointer;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 400px;
+    border: none;
+    border: 1px solid #4d1c8a;
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    color: #4d1c8a;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+control-messages div {
+    color: #E82C0C;
+    margin: 6px 0;
+    text-align: left;
+    width: 300px;
+}
+
+.floatLeft {
+    float: left;
+}
+.floatRight {
+    float: right;
+}
+ol, ul {
+    list-style-type: none;
+}
+/*===============Material=================*/
+.inputBottomBar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.inputBottomBar:before,
+.inputBottomBar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.inputBottomBar:before {
+    left: 50%;
+}
+
+.inputBottomBar:after {
+    right: 50%;
+}
+
+input:focus ~ .inputBottomBar:before,
+input:focus ~ .inputBottomBar:after {
+    width: 50%;
+}

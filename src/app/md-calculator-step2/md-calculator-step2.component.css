@@ -1,0 +1,131 @@
+.MDcontainer {
+    background-color: #4d1c8a; 
+    height: 500px; 
+    color: #ffffff;
+}
+.title {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 70px;
+}
+.sub-title {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.MDcontainer ul li {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 15px;
+    height: 51px;
+    border-bottom: 1px solid #C89DFD;
+}
+
+.MDcontainer ul li div {
+    float: left;
+    
+}
+
+.MDcontainer ul li div:nth-child(2) {
+    font-size: 25px;
+}
+
+.bell {
+    background: url("../../assets/images/questionMarkGrey.png") repeat-y;
+    width: 33px;
+    height: 28px;
+    margin: 0 auto;
+}
+
+.startBtn {
+    margin: 0 auto;
+    color: #ffffff;
+    background-color: #4d1c8a;
+    padding: 10px 30px;
+}
+
+.MDcontainer ul {
+    background-color: #ffffff;
+    color: #4d1c8a;
+    width: 42%;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 300px;
+}
+
+header,
+.tooltip,
+.tooltip p {
+  margin: 4em 0;
+  text-align: center;
+}
+
+/**
+ * Tooltip Styles
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -160px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #FAFAFA;
+  background-color: #FAFAFA;
+  color: #000;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #FAFAFA;
+  border-top: 5px solid #FF060;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
