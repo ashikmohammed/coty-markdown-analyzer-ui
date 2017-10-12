@@ -3,6 +3,19 @@
     display: block;
 }
 
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 400px;
+    border: none;
+    border: 1px solid #4d1c8a;
+}
+
+input:focus {
+    outline: none;
+}
+
 .placHolder {
     position: relative;
     margin-bottom: 30px;
