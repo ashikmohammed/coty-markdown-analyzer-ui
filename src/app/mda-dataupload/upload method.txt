@@ -1,0 +1,39 @@
+uploadRawDataTemplate= function()
+  {
+	   let fileBrowser = this.fileInput.nativeElement;
+	   let url= "http://localhost:8080/upload";
+    if (fileBrowser.files && fileBrowser.files[0]) {
+      let formData = new FormData();
+      formData.append("file", fileBrowser.files[0],fileBrowser.files[0].name);
+	 
+      this.datauploadService.upload(formData,url).subscribe(res => {
+		   this.router.navigate(['/MdChooseRetailer']);
+        // do stuff w/my uploaded file
+      });
+    }
+	  
+	 
+
+
+ //to be implementd.
+
+
+service
+upload(formData,url) {
+		console.log(formData);
+   let options = new RequestOptions({
+       headers: new Headers({
+        'Content-Type': 'multipart/form-data'
+      }),
+	  body: formData
+    });
+ return this.http
+      .post(url,options)
+        .map(res => {
+			      console.log(res);
+                 return res.json();
+				 
+        }, error => {
+            console.log(error.json());
+        });
+  }

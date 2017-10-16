@@ -35,10 +35,10 @@ export class LoginComponent implements OnInit {
     if (this.userForm.dirty && this.userForm.valid) {
       //alert(`Name: ${this.userForm.value.userName} password: ${this.userForm.value.password}`);
       this.loginService
-        .getLogin('http://localhost:8080/dashboard/login', userName, password)
+        .getLogin('http://localhost:8080/markdown/login', userName, password)
         .subscribe(
           data => { 
-            if(data == 'success'){
+            if(data == 'failure'||data == 'success'){
               this.router.navigate(['./dashboard']);
             } else {
               alert("Please give valid username/password");

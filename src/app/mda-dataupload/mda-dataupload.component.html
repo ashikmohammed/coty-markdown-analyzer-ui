@@ -1,0 +1,42 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<div class="MDcontainer">
+  <div class="title">Upload RAW Data Template </div>
+  <div class="sub-title">Upload the template with the UPCs of the products on which markdown analysis need to be done.</div>
+
+  
+<div class="row tempatePaddingDownload">
+  <div class="col-lg-4 col-xs-12 col-sm-4">
+  </div>
+  <div class="row col-lg-6 col-xs-12 col-sm-4">
+  <div class=" col-lg-1 questionMarkGrey" tooltip="Download RAW Data Template."></div>
+<a href="../../assets/docs/Raw Data Template.xlsx" download="Raw Data Template.xlsx">
+
+<button class="col-lg-5 button_Download">Download RAW Data Template<i class="fa fa-download pull-right" aria-hidden="true"></i></button>
+</a>
+  </div>
+  <div class="col-lg-2 col-xs-12 col-sm-4">
+  </div>
+  </div>
+  <div class="row tempatePaddingUpload wrapper">
+  <div>
+  Upload Raw Data Excel
+  </div>
+  </div>
+    <div class=" row tempatePaddingUpload wrapper">
+  <div class="col-lg-4 col-xs-12 col-sm-4">
+  </div>
+  <div class="row col-lg-6 col-xs-12 col-sm-4">
+  <div class="questionMarkGrey col-lg-1" tooltip="Upload Raw Data Excel." ></div>
+  <button class="button_Upload col-lg-11"><div [hidden]="showIcon"><i class="fa fa-check-circle pull-left" ></i></div><input type="file" id="fileInput" #fileInput name="file" accept=".xlsx" (change)="change($event)"/>{{uploadText}}<i class="fa fa-upload pull-right" aria-hidden="true"></i></button>
+  </div>
+  <div class="col-lg-2 col-xs-12 col-sm-4">
+  </div>
+  </div>
+</div>
+ <footer class="footerbackground">
+ <div class="row wrapper" >
+  <button type="button" class= "btn btn-primary btn-default" (click)="previous();"tooltip="previus">Previous</button>
+   <button type="button" class= "btn btn-primary btn-default"(click)="uploadRawDataTemplate();"tooltip="Save & Continue">Save & Continue</button>
+</div>
+ </footer>

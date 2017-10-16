@@ -5,11 +5,17 @@ import { Router, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { routes } from './app.router';
 import { HttpModule } from '@angular/http';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { ControlMessagesComponent } from './control-messages.component';
 import { ValidationService } from './validation.service';
 
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
+import { MdaDatauploadService } from './mda-dataupload/mda-dataupload.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,6 +29,8 @@ import { MdWhatYouNeedComponent } from './md-what-you-need/md-what-you-need.comp
 import { MdSelectRetailerComponent } from './md-select-retailer/md-select-retailer.component';
 import { MdChooseRetailerComponent } from './md-choose-retailer/md-choose-retailer.component';
 import { MdInventorySummaryComponent } from './md-inventory-summary/md-inventory-summary.component';
+import { MdaDatauploadComponent } from './mda-dataupload/mda-dataupload.component';
+import { MdaStorerankingUploadComponent } from './mda-storeranking-upload/mda-storeranking-upload.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +48,24 @@ import { MdInventorySummaryComponent } from './md-inventory-summary/md-inventory
     MdWhatYouNeedComponent,
     MdSelectRetailerComponent,
     MdChooseRetailerComponent,
-    MdInventorySummaryComponent
+    MdInventorySummaryComponent,
+    MdaDatauploadComponent,
+    MdaStorerankingUploadComponent
   ],
   imports: [
-    BrowserModule, HttpModule, RouterModule,
-    FormsModule, ReactiveFormsModule, routes
+    BrowserModule,
+	HttpModule,
+	AlertModule.forRoot(),
+	BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
+	RouterModule,
+    FormsModule,
+	ReactiveFormsModule, 
+	routes
   ],
-  providers: [ LoginService, ValidationService ],
+  exports: [AlertModule,BsDropdownModule, TooltipModule, ModalModule],
+  providers: [ LoginService, ValidationService, MdaDatauploadService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
