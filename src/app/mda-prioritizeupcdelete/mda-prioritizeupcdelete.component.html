@@ -1,0 +1,44 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<div class="MDcontainer">
+<div class="title">UPC's in Consideration for Delete </div>
+  <div class="sub-title">Please edit Str/UPC-specific Data Below</div>
+  <div class="tablescroll">
+    <table class="col-lg-6 table table-bordered">
+        <thead >
+            <tr class="tableHeader">
+                <td>UPC</td>
+                <td>DESC</td>
+                <td>Priority</td>
+                <td>Must-Del?</td>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let emp of unequeUPCs;let i=idx">
+                <td>{{emp.UPC}}</td>
+				<td>{{emp.Desc}}</td>
+				<td >
+				<select id="PTOtype" class="option"  (change)="priorityChange($event);">
+                   <option class="option" *ngFor="let prior of emp.Priority;let i=idx" [value]="prior.key">{{prior.value}}</option>
+                </select>
+				</td>
+				<td >
+				<select id="mustdel" class="option" (change)="mustDeleteChange($event);">
+                   <option class="option" *ngFor="let del of emp.MustDel;let i=idx" [value]="del.key">{{del.value}}</option>
+                </select>
+				</td>
+            </tr>
+ 
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+
+<footer>
+ <div class="row wrapper" >
+  <button type="button" class= "btn btn-primary btn-default" (click)="previous();"tooltip="previus">Previous</button>
+   <button type="button" class= "btn btn-primary btn-default"(click)="saveNext();"tooltip="Save & Continue">Save & Continue</button>
+</div>
+ </footer>

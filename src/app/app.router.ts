@@ -14,6 +14,7 @@ import { MdChooseRetailerComponent } from './md-choose-retailer/md-choose-retail
 import { MdInventorySummaryComponent } from './md-inventory-summary/md-inventory-summary.component';
 import { MdaDatauploadComponent } from './mda-dataupload/mda-dataupload.component';
 import { MdaStorerankingUploadComponent } from './mda-storeranking-upload/mda-storeranking-upload.component';
+import { MdaPrioritizeupcdeleteComponent } from './mda-prioritizeupcdelete/mda-prioritizeupcdelete.component';
 
 export const router: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -28,7 +29,8 @@ export const router: Routes = [
     { path: 'MdChooseRetailer', component: MdChooseRetailerComponent },
     { path: 'MdInventorySummary', component: MdInventorySummaryComponent },
 	{path: 'mdaDataUpload',component:MdaDatauploadComponent},
-	{path: 'mdaStoreRankingUpload',component:MdaStorerankingUploadComponent}
+	{path: 'mdaStoreRankingUpload',component:MdaStorerankingUploadComponent},
+	{path: 'mdaPrioritizeDelete',component:MdaPrioritizeupcdeleteComponent}
 ];
 
 //export const routes: ModuleWithProviders = RouterModule.forRoot(router); 

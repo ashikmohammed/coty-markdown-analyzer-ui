@@ -31,6 +31,7 @@ import { MdChooseRetailerComponent } from './md-choose-retailer/md-choose-retail
 import { MdInventorySummaryComponent } from './md-inventory-summary/md-inventory-summary.component';
 import { MdaDatauploadComponent } from './mda-dataupload/mda-dataupload.component';
 import { MdaStorerankingUploadComponent } from './mda-storeranking-upload/mda-storeranking-upload.component';
+import { MdaPrioritizeupcdeleteComponent } from './mda-prioritizeupcdelete/mda-prioritizeupcdelete.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { MdaStorerankingUploadComponent } from './mda-storeranking-upload/mda-st
     MdChooseRetailerComponent,
     MdInventorySummaryComponent,
     MdaDatauploadComponent,
-    MdaStorerankingUploadComponent
+    MdaStorerankingUploadComponent,
+    MdaPrioritizeupcdeleteComponent
   ],
   imports: [
     BrowserModule,

@@ -46,7 +46,7 @@ export class MdaStorerankingUploadComponent implements OnInit {
                 .post(URL, formData).map((res:any) => res).subscribe(
                     (success) => {
                      alert(success._body);
-					 this.router.navigate(['/MdChooseRetailer']);
+					 this.router.navigate(['/mdaPrioritizeDelete']);
                   },
                     (error) => alert(error)
                 );

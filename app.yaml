@@ -14,4 +14,13 @@
 # [START runtime]
 runtime: nodejs
 env: flex
+#network:
+  #instance_tag: TAG_NAME
+  #name: NETWORK_NAME
+  #subnetwork_name: SUBNETWORK_NAME
+  #forwarded_ports:
+   # - PORT
+    #- HOST_PORT:CONTAINER_PORT
+    #- PORT/tcp
+    #- HOST_PORT:CONTAINER_PORT/udp
 # [END runtime]
