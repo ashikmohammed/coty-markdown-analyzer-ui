@@ -1,7 +1,17 @@
 <app-header></app-header>
 <app-nav></app-nav>
 <div class="row no-gutters MDcontainer">
-  <div class="title">What you need</div>
+    <div class="title">What you need</div>
+    <div class="box_first">
+        <div><span>Input Data required for Markdown</span></div>
+        <div><span>Details Required for Topline Summary</span></div>
+        <div><span>Detailes required for Sustainable Growth</span></div>
+        <div><span>Details requried for Innovation Summary</span></div>
+    </div>
+    <div>
+            <a class="button startBtn" [routerLink]="['/MdCalStep2']">Start</a>
+        </div>
+  <!--
   <div class="sub-title">Here are the Elements needed for the markdown analysis.</div>
   <ul>
     <li>
@@ -10,8 +20,5 @@
     <li>
         2. Maximum Trade Spent Allowance. *
     </li>
-  </ul>
-  <div>
-      <a class="button startBtn" [routerLink]="['/MdCalStep2']">Start</a>
-  </div>
+  </ul-->
 </div>

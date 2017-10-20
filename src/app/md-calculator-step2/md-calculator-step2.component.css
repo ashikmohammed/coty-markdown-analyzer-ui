@@ -6,7 +6,7 @@
 .title {
     text-align: center;
     font-size: 30px;
-    padding-top: 70px;
+    padding-top: 40px;
 }
 .sub-title {
     text-align: center;
@@ -17,22 +17,19 @@
 .MDcontainer ul li {
     text-align: center;
     font-size: 18px;
+    padding: 0px 10px;
     padding-top: 15px;
     height: 51px;
     border-bottom: 1px solid #C89DFD;
 }
 
-.MDcontainer ul li div {
-    float: left;
-    
-}
-
 .MDcontainer ul li div:nth-child(2) {
-    font-size: 25px;
+    font-size: 20px;
+    padding: 0px 20px;
 }
 
-.bell {
-    background: url("../../assets/images/questionMarkGrey.png") repeat-y;
+.questionMarkGrey {
+    background: url("../../assets/images/questionMarkGrey.png") no-repeat;
     width: 33px;
     height: 28px;
     margin: 0 auto;
@@ -48,11 +45,12 @@
 .MDcontainer ul {
     background-color: #ffffff;
     color: #4d1c8a;
-    width: 42%;
+    width: 45%;
     border-radius: 20px;
     margin: 0 auto;
     margin-top: 20px;
     height: 300px;
+    padding: 0px 35px;
 }
 
 header,
