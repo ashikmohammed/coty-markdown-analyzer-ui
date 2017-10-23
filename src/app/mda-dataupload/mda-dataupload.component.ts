@@ -20,10 +20,6 @@ export class MdaDatauploadComponent implements OnInit {
   {
   }
   
-  submit= function () {
-        this.router.navigateByUrl('/MdChooseRetailer');
-  };
-  
    previous= function () {
         this.router.navigateByUrl('/MdSelectRetailer');
   };
@@ -38,7 +34,7 @@ export class MdaDatauploadComponent implements OnInit {
 
   uploadRawDataTemplate= function()
   {
-	     let inputEl = this.fileInput.nativeElement;
+	    let inputEl = this.fileInput.nativeElement;
         console.log("iam+ "+inputEl);
         let fileCount: number = inputEl.files.length;
         let formData = new FormData();
@@ -49,21 +45,13 @@ export class MdaDatauploadComponent implements OnInit {
             this.http
                 .post(URL, formData).map((res:any) => res).subscribe(
                     (success) => {
-                     alert(success._body);
 					 this.router.navigate(['/mdaStoreRankingUpload']);
                   },
                     (error) => alert(error)
+					
                 );
-
+               this.router.navigate(['/mdaStoreRankingUpload']);//should be commented 
         }
 	   
-  };
-  
-  uploadDataTemplate= function()
-  {
-	    
-	  //to be implementd.
-	 
-  };
-
+  }; 
 }

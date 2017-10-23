@@ -1,0 +1,104 @@
+<app-header></app-header>
+<section class="main-body">
+    <div class="container-fluid whatYouNeedContainer">
+            <div class="row">
+            <h2>MARKDOWN CALCULATOR STEPS</h2>
+            <div class="stepwizard">
+                <div class="stepwizard-row">
+                    <div class="stepwizard-step step-completed" style="text-align:left;">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/MdWhatYouNeed']"></button>
+                        <p>What You Need</p>
+                    </div>
+                    <div class="stepwizard-step step-completed" style="width:83px;">
+                        <button type="button" class="btn btn-default btn-circle  btn-active" [routerLink]="['/MdSelectRetailer']"></button>
+                        <p>&nbsp;&nbsp;Retailer</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/mdaDataUpload']"></button>
+                        <p>&nbsp;&nbsp;Raw Data</p>
+                    </div>
+					<div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/mdaStoreRankingUpload']"></button>
+                        <p>&nbsp;&nbsp;Store Ranking</p>
+                    </div>
+					<div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/MdPrioritizeupcdelete']"></button>
+                        <p>&nbsp;&nbsp;Set Priority</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" [routerLink]="['/MdChooseRetailer']" ></button>
+                        <p>Retail or Cost </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p> Inventory Summary</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>How Many Waves </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Wave Details</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Markdown Summary </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Innovation Details </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Innovation Summary </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class ="row">
+<div class="MDcontainer">
+<div class="title">UPC's in Consideration for Delete </div>
+  <div class="sub-title">Please edit Str/UPC-specific Data Below</div>
+  <div class="tablescroll">
+    <table class="col-lg-6 table table-bordered">
+        <thead >
+            <tr class="tableHeader">
+                <td>UPC</td>
+                <td>DESC</td>
+                <td>Priority</td>
+                <td>Must-Del?</td>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let emp of unequeUPCs;let i=idx">
+                <td>{{emp.UPC}}</td>
+				<td>{{emp.Desc}}</td>
+				<td >
+				<select id="PTOtype" class="option"  (change)="priorityChange($event);">
+                   <option class="option" *ngFor="let prior of emp.Priority;let i=idx" [value]="prior.key">{{prior.value}}</option>
+                </select>
+				</td>
+				<td >
+				<select id="mustdel" class="option" (change)="mustDeleteChange($event);">
+                   <option class="option" *ngFor="let del of emp.MustDel;let i=idx" [value]="del.key">{{del.value}}</option>
+                </select>
+				</td>
+            </tr>
+ 
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer>
+ <div class="footer-fixed">
+ <div class="row wrapper">
+  <button type="button" class= "btn btn-primary" (click)="previous();"tooltip="previus"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp; Previous</button>
+   <button type="button" class= "btn btn-primary"(click)="saveNext();"tooltip="Save & Continue">Save & Continue&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+</div>
+</div>
+ </footer>

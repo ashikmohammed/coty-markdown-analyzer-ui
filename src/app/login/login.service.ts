@@ -3,6 +3,7 @@ import { Http, RequestOptions, RequestMethod, Headers, URLSearchParams } from '@
 import 'rxjs/add/operator/toPromise';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import {LocalStorageService, SessionStorageService} from 'ngx-webstorage';
 
 // Observable operators
 import 'rxjs/add/operator/catch';
@@ -14,7 +15,7 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class LoginService {
   
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router, private sessionStorage:SessionStorageService) { }
 
   getLogin(url, userName: string, password: string): Observable<any> {
 
@@ -30,7 +31,8 @@ export class LoginService {
     return this.http
       .post(url, JSON.stringify(payLoad), options)
         .map(data => {
-              //console.log(data.text());
+            console.log('test');
+              console.log(data.text());
               return data.text();
         }, error => {
             console.log(error.json());
@@ -42,6 +44,18 @@ export class LoginService {
         error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error("Custom Error" + errMsg);
     return Observable.throw(errMsg);
+  }
+  setSession = function(session)
+  {
+	this.sessionStorage.store('sessionID', session);  
+  }
+  getSession = function()
+  {
+	return this.sessionStorage.retrieve('sessionID');  
+  }
+  resetSession = function()
+  {
+	   this.sessionStorage.clear('sessionID');
   }
 }
 

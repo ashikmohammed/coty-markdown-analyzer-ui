@@ -1,0 +1,44 @@
+
+.startBtn {
+    margin: 0 auto;
+    color: #ffffff;
+    background-color: #4d1c8a;
+    padding: 10px 30px;
+}
+
+.radioContainer {
+    float: left; width: 40%;
+}
+input[type="radio"] {
+    margin-right: 10px;
+}
+.MDcontainer input[type="text"] {
+    border-radius: 20px;
+    color: #000000;
+    border: 0px;
+    padding: 3px;
+}
+
+
+
+.padBottom20px {
+    padding-bottom: 20px;
+}
+
+.middleContainer {
+    width: 60%; 
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.middleContainerMiddle {
+    width: 70%; 
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.fourColumn {
+    float: left;
+    width: 25%;
+    height: 50px;
+}
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-md-choose-retailer',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MdChooseRetailerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  previous (){
+    this.router.navigate(['/MdPrioritizeupcdelete']);
+  }
+  next(){
+    this.router.navigate(['/MdInventorySummary']);
   }
 
 }

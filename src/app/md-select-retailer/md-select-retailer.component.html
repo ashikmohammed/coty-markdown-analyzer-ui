@@ -1,88 +1,88 @@
 <app-header></app-header>
-<app-nav></app-nav>
-<div class="row no-gutters MDcontainer">
+<section class="main-body">
+    <div class="container-fluid whatYouNeedContainer">
+        <div class="row">
+            <h2>MARKDOWN CALCULATOR STEPS</h2>
+            <div class="stepwizard">
+                <div class="stepwizard-row">
+                    <div class="stepwizard-step step-completed" style="text-align:left;">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/MdWhatYouNeed']"></button>
+                        <p>What You Need</p>
+                    </div>
+                    <div class="stepwizard-step step-completed" style="width:83px;">
+                        <button type="button" class="btn btn-default btn-circle  btn-active"></button>
+                        <p>&nbsp;&nbsp;Retailer</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>&nbsp;&nbsp;Raw Data</p>
+                    </div>
+					<div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>&nbsp;&nbsp;Store Ranking</p>
+                    </div>
+					<div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>&nbsp;&nbsp;Set Priority</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" ></button>
+                        <p>Retail or Cost </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p> Inventory Summary</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>How Many Waves </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Wave Details</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Markdown Summary </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Innovation Details </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Innovation Summary </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="row no-gutters MDcontainer">
   <div class="title">Select Retailer</div>
   <div class="sub-title">Please Select Retailer</div>
   <ul>
-    <!--li>
-        <div class="bell" data-tooltip="Further Explain Hover."></div>
-        <div>Walmart</div>
-        <div style="float: right;"><input type="radio" name="" value="" /></div>
-    </li>
-    <li>
-        <div class="bell" data-tooltip="Further Explain Hover."></div>
-        <div>Walmart</div>
-        <div><input type="radio" name="" value="" /></div>
-    </li-->
-    <li>
-      <div class="row padBottom20px">
+    <li *ngFor="let entry of radioEnties">
+	<div class="row padBottom20px">
         <div class="floatLeft">
-            <div class="questionMarkGrey" data-tooltip="Further Explain Hover."></div>
+          <div class="questionMarkGrey" data-tooltip="Further Explain Hover."></div>
         </div>
         <div class="floatLeft">
-            Walmart
+          {{ entry.description }}
         </div>
-        <div class="col-sm-400 floatRight">       
-            <input type="radio" />
+        <div class="col-sm-400 floatRight">
+          <input type="radio" name="selectRetailer" [checked]="idx === 0" 
+            [value]="entry.id" 
+            (change)="onSelectionChange(entry)"/>
         </div>
       </div>
     </li>
-    <li>
-      <div class="row padBottom20px">
-        <div class="floatLeft">
-            <div class="questionMarkGrey" data-tooltip="Further Explain Hover."></div>
-        </div>
-        <div class="floatLeft">
-            CVS Parmacy
-        </div>
-        <div class="col-sm-400 floatRight">       
-            <input type="radio" />
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="row padBottom20px">
-        <div class="floatLeft">
-            <div class="questionMarkGrey" data-tooltip="Further Explain Hover."></div>
-        </div>
-        <div class="floatLeft">
-          Walgreens
-        </div>
-        <div class="col-sm-400 floatRight">       
-            <input type="radio" />
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="row padBottom20px">
-        <div class="floatLeft">
-            <div class="questionMarkGrey" data-tooltip="Further Explain Hover."></div>
-        </div>
-        <div class="floatLeft">
-          Target
-        </div>
-        <div class="col-sm-400 floatRight">       
-            <input type="radio" />
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="row padBottom20px">
-        <div class="floatLeft">
-            <div class="questionMarkGrey" data-tooltip="Further Explain Hover."></div>
-        </div>
-        <div class="floatLeft">
-          Rtie Aid
-        </div>
-        <div class="col-sm-400 floatRight">       
-            <input type="radio" />
-        </div>
-      </div>
-    </li>
-    
-   
   </ul>
-  <div>
-    <a class="button startBtn" [routerLink]="['/mdaDataUpload']">Start</a>
-  </div>
 </div>
+</div>
+</section>
+
+<footer class="footer-fixed">
+  <div class="row wrapper">
+    <button type="button" class="btn btn-primary " (click)="previous();" tooltip="previus"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp; Previous</button>
+    <button type="button" class="btn btn-primary" (click)="next();" tooltip="Save & Continue">Save & Continue&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+  </div>
+</footer>

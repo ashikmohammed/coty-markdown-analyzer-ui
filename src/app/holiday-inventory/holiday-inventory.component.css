@@ -1,0 +1,15 @@
+/* Position text in the middle */
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.bgimg {
+    background:url("../../assets/images/login-background.png") top right no-repeat;
+    background-size:cover;
+    background-position-y: 2%;
+    z-index:97;
+    min-height: 78vh;
+}

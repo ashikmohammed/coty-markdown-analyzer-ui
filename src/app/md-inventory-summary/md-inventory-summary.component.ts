@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-md-inventory-summary',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MdInventorySummaryComponent implements OnInit {
 
-  constructor() { }
+  @Input() cdMsg : string = 'Hello';
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  previous() {
+    this.router.navigate(['/MdChooseRetailer']);
+  }
+  next() {
+    this.router.navigate(['/MdHowManyWaves']);
+  }
 }

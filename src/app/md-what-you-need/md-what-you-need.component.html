@@ -1,14 +1,84 @@
 <app-header></app-header>
-<app-nav></app-nav>
-<div class="row no-gutters MDcontainer">
-    <div class="title">What you need</div>
-    <div class="box_first">
-        <div><span>Input Data required for Markdown</span></div>
-        <div><span>Details Required for Topline Summary</span></div>
-        <div><span>Detailes required for Sustainable Growth</span></div>
-        <div><span>Details requried for Innovation Summary</span></div>
-    </div>
-    <div>
-            <a class="button startBtn" [routerLink]="['/MdSelectRetailer']">Start</a>
+<section class="main-body" >
+  <div class="container-fluid whatYouNeedContainer">
+    <div class="row">
+      <h2>MARKDOWN CALCULATOR STEPS</h2>
+      <div class="stepwizard">
+        <div class="stepwizard-row">
+          <div class="stepwizard-step step-completed" style="text-align:left;">
+            <button type="button" class="btn btn-default btn-circle btn-active "></button>
+            <p>What You Need</p>
+          </div>
+          <div class="stepwizard-step step-completed" style="width:83px;">
+            <button type="button" class="btn btn-default btn-circle"  ></button>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Retailer</p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle"></button>
+            <p>Upload SKU UPC's </p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>Retail or Cost </p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p> Inventory Summary</p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>How Many Waves </p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>Wave Details</p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>Markdown Summary </p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>Innovation Details </p>
+          </div>
+          <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>Innovation Summary </p>
+          </div>
         </div>
-</div>
+      </div>
+      <div class="whatYouNeedContent">
+        <h3>What You Need</h3>
+        <p class="text-center font12"> Here are the elements needed for the markdown analysis.</p>
+       
+        <ul class="markdownAnalysisList col-sm-6  col-xs-12">
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>1. List of SKU UPCs to be considered for Markdown Analysis.*</span> </li>
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>2. List of SKU UPCs to be considered for Markdown Analysis.* </span> </li>
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>3. Maximum Trade Spent Allowance </span> </li>
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>4. Minimum ROI </span> </li>
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>5. Disposal Fee </span> </li>
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>6. Unit cost price point for innovation * </span> </li>
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>7. Number of SKUs to replace/add * </span> </li>
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>8. Mod Set QTY per SKU * </span> </li>
+          <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>9. Percentile classification for TOP, MID and LOW tier stores. * </span> </li>
+        </ul>
+        <div class="requiredPara">
+            <p>* - Required inputs</p>
+            <p>Optional inputs based on account specific markdown strategy</p>
+        </div>
+      </div>
+    </div>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <p>&nbsp;</p>
+   
+  </div>
+  <div class="footer-fixed">
+   <div class="row wrapper">
+    <button type="submit" class="btn btn-primary " [routerLink]="['/MdSelectRetailer']">Start&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+    </div>
+  
+  </div>
+</section>

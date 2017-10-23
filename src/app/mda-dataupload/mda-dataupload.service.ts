@@ -3,7 +3,7 @@ import { Http, RequestOptions,Response, RequestMethod, Headers, URLSearchParams 
 import 'rxjs/add/operator/toPromise';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { FileSaver } from 'file-saver';
+//import { FileSaver } from 'file-saver';
 
 
 

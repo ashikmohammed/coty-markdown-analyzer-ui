@@ -1,4 +1,62 @@
-/*===============custom=================*/
+/*===============UX=================*/
+/*
+@charset "utf-8";
+
+.logoCoty {
+	margin-top: 40px;
+    margin-bottom: 50px;
+	text-align:center;	
+}
+	
+.loginForm {
+	width:414px;
+	margin:0 auto;	
+}
+
+.loginFormText {
+	font-size:20px;
+	color: #4C1D82;
+	text-align:center;
+	margin-bottom:15px;
+    letter-spacing: 0.01em;
+}
+.loginForm input.form-control{
+	border: solid 1px #4C1D82;
+	height:52px;
+	font-size:26px;
+	border-radius:0;
+	color: #4C1D82;
+}
+.loginForm input {
+	margin-bottom:33px;	
+}
+
+.loginForm button {
+	border: solid 1px #4C1D82;
+	border-radius: 15px;
+	min-width:137px;
+	color: #4C1D82;
+	font-weight:bold;
+	margin-right:5px;
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(192,192,192,1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(192,192,192,1);
+    box-shadow: 0px 2px 5px 0px rgba(192,192,192,1);
+}
+
+.loginForm .btn-primary {
+	border-color:#4C1D82;
+	background-color:#4C1D82;
+	color:#fff;
+}
+.loginContainer{
+	background:url("../../assets/images/login-background.png") top right no-repeat;
+	background-size:cover;
+    background-position-y: 2%;
+	z-index:97;
+    min-height: 78vh;
+}
+*/
+/*===============custom=================
 .container {
     display: block;
 }
@@ -50,8 +108,8 @@ input:focus {
 .backgroundLoginImage {
     background-image: url("../../assets/images/cotyDesktopBanner_bg.jpg"); 
 }
-
-/*===============Login page=================*/
+*/
+/*===============Login page=================
 .login {
     margin: 0 auto;
     text-align: center;
@@ -69,8 +127,8 @@ input:focus {
 .marTop20px {
     margin-top: 20px;
 }
-
-/*===============Header=================*/
+*/
+/*===============Header=================
 .topBoxShadow {
 	box-shadow: 0px 4px 4px #D1D1D1;
     margin-top: 11px;
@@ -89,3 +147,4 @@ input:focus {
     height: 26px;
     margin: 0 auto;
 }
+*/
