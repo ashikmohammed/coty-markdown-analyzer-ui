@@ -1,5 +1,6 @@
 import { ViewChild,Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login/login.service';
 import { Http, RequestOptions,Response, RequestMethod, Headers, URLSearchParams } from '@angular/http';
 //import { MdaDatauploadService } from './mda-dataupload.service'
 const URL = 'http://localhost:8080/upload/storeranking';
@@ -15,10 +16,13 @@ export class MdaStorerankingUploadComponent implements OnInit {
    @ViewChild('fileInput') fileInput;
    uploadText ="Upload Store Ranking Excel"; 
 	showIcon = true;
-  constructor(private router: Router,private http: Http) { }
+	sessionPayload = {};
+	sessionId;
+  constructor(private router: Router,private http: Http, private loginService: LoginService) { }
    
   ngOnInit() {
-	
+	this.sessionPayload = this.loginService.getSessionPayloadData();
+	this.sessionId = this.loginService.getSession();
   }
   
   previous () 
@@ -43,6 +47,7 @@ export class MdaStorerankingUploadComponent implements OnInit {
             for (let i = 0; i < fileCount; i++) {
                 formData.append('uploadfile', inputEl.files.item(i));
             }
+                formData.append('sessionId', this.sessionId);
             this.http
                 .post(URL, formData).map((res:any) => res).subscribe(
                     (success) => {

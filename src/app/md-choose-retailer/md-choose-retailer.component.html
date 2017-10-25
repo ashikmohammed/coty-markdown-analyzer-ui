@@ -60,30 +60,18 @@
   <div class="title">Choose Retail or Cost</div>
   <div class="sub-title">When your Buyer marks down product for End of Season, is it on Retail or Cost?</div>
   <ul>
-
-    <li>
-      <div class="row padBottom20px">
+     <li *ngFor="let entry of radioEnties">
+	<div class="row padBottom20px">
         <div class="floatLeft">
           <div class="questionMarkGrey" data-tooltip="Further Explain Hover."></div>
         </div>
         <div class="floatLeft">
-          Retail
+          {{ entry.description }}
         </div>
         <div class="col-sm-400 floatRight">
-          <input type="radio" name="chooseRetailer" />
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="row padBottom20px">
-        <div class="floatLeft">
-          <div class="questionMarkGrey" data-tooltip="Further Explain Hover."></div>
-        </div>
-        <div class="floatLeft">
-          Cost
-        </div>
-        <div class="col-sm-400 floatRight">
-          <input type="radio" name="chooseRetailer" />
+          <input type="radio" name="selectRetailer" [(ngModel)]="checked" 
+            [value]="entry.id" 
+            (change)="onSelectionChange(entry)"/>
         </div>
       </div>
     </li>

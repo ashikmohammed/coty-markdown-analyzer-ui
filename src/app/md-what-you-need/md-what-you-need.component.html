@@ -5,17 +5,18 @@
       <h2>MARKDOWN CALCULATOR STEPS</h2>
       <div class="stepwizard">
         <div class="stepwizard-row">
-          <div class="stepwizard-step step-completed" style="text-align:left;">
+          <div class="stepwizard-step" style="text-align:left;">
             <button type="button" class="btn btn-default btn-circle btn-active "></button>
             <p>What You Need</p>
           </div>
-          <div class="stepwizard-step step-completed" style="width:83px;">
+          <div class="stepwizard-step" style="width:83px;">
             <button type="button" class="btn btn-default btn-circle"  ></button>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;Retailer</p>
+            <p>Retailer   </p>
           </div>
           <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle"></button>
-            <p>Upload SKU UPC's </p>
+            <p>Upload Data 
+			for Markdown</p>
           </div>
           <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
@@ -27,7 +28,7 @@
           </div>
           <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
-            <p>How Many Waves </p>
+            <p>How Many Waves</p>
           </div>
           <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
@@ -35,23 +36,41 @@
           </div>
           <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
-            <p>Markdown Summary </p>
+            <p>Topline Summary</p>
+          </div>
+		  <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>Sustainable
+			Growth Details</p>
+          </div>
+		  <div class="stepwizard-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>Sustainable
+			Summary</p>
           </div>
           <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
-            <p>Innovation Details </p>
+            <p>Innovation 
+			Details</p>
           </div>
           <div class="stepwizard-step">
             <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
-            <p>Innovation Summary </p>
+            <p>Innovation
+			Summary</p>
+          </div>
+		  <div class="stepwizard-step" >
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+            <p>Summary Reports</p>
           </div>
         </div>
       </div>
       <div class="whatYouNeedContent">
+      <div class="contentTitle">
         <h3>What You Need</h3>
         <p class="text-center font12"> Here are the elements needed for the markdown analysis.</p>
-       
-        <ul class="markdownAnalysisList col-sm-6  col-xs-12">
+        <div class="titleSep"></div>
+       </div>
+        <!--<ul class="markdownAnalysisList col-sm-6  col-xs-12">
           <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>1. List of SKU UPCs to be considered for Markdown Analysis.*</span> </li>
           <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>2. List of SKU UPCs to be considered for Markdown Analysis.* </span> </li>
           <li><span> <i class="fa fa-question-circle" aria-hidden="true"></i></span> <span>3. Maximum Trade Spent Allowance </span> </li>
@@ -65,7 +84,81 @@
         <div class="requiredPara">
             <p>* - Required inputs</p>
             <p>Optional inputs based on account specific markdown strategy</p>
-        </div>
+        </div>-->
+        
+        
+        <div class="row ">
+      <div class="col-md-3 col-sm-6 col-xs-12  whatYouNeedCol">
+        <h4>Input Data required for Markdown</h4>
+        <h5>Upload Data for Markdown Analysis</h5>
+        <ul class="whatYouNeedList">
+            <li>UPC</li>
+            <li>Description</li>
+            <li>Store</li>
+            <li>Category</li>
+            <li>Unit Retail</li>
+            <li>Unit Cost</li>
+            <li>Current OH Inventory</li>
+            <li>POS QTY (across 52 weeks by week)</li>
+        
+        </ul>
+        
+        
+        <h5>Upload Data for Store Ranking</h5>
+		<ul  class="whatYouNeedList">
+            <li>Str</li>
+            <li>Gross $</li>
+            <li>$PSPW</li>
+            <li>Gross Cost $</li>
+            <li>Gross Units</li>
+            <li>Total OH QTY</li>
+          </ul>
+          
+          <h5>List of SKU UPC's to be considered for Markdown</h5>
+		<ul  class="whatYouNeedList border0">
+            <li>UPC's (Will be pre-populated)</li>
+            <li>Priority</li>
+            <li>Must Delete (Yes/No)</li>
+        </ul>
+          
+          
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12  whatYouNeedCol">
+        <h4>Details required for Topline Summary</h4>
+			<ul  class="whatYouNeedList border0">
+            <li>Markdown Details (Number of waves, Markdown, Coty ownership of Markdown %, Length in weeks, List %)</li>
+        	<li>Maximum Trade Spent Allowance</li>
+            <li>Minimum ROI</li>
+            <li>Disposal Fee</li>
+            <li>Enter the % Disposal fee (% of residual inventory)</li>
+            </ul>
+      </div>
+      <div class="col-md-3  col-sm-6  col-xs-12 whatYouNeedCol">
+        <h4>Details required for Sustainable Growth</h4>
+        <ul  class="whatYouNeedList border0">
+            <li>Top Tier % Percentile</li>
+            <li>Mid Tier % Percentile</li>
+            <li>Bottom Tier % percentile</li>
+            <li>For TOP Replace _ SKU's with _ SKU's</li>
+            <li>For MID Replace _ SKU's with _SKU's</li>
+            <li>Mod Set Quantity for TOP Tier Stores</li>
+            <li>Mod Set Quantity for MID Tier Stores</li>
+            <li>Mod Set Quantity for BOTTOM Tier Stores</li>
+        </ul>
+
+
+      </div>
+      
+       <div class="col-md-3  col-sm-6  col-xs-12 whatYouNeedCol">
+        <h4>Details required for Innovation Summary</h4>
+        <ul  class="whatYouNeedList border0">
+            <li>Lift on Innovation vs. Deletes</li>
+            <li>Standard Modset QTY per SKU</li>
+            <li>Innovation Unit Retail</li>
+            <li>Innovation Unit Cost</li>
+        </ul>
+      </div>
+    </div>
       </div>
     </div>
     

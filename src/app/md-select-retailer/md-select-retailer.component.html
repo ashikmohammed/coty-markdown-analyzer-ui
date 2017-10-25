@@ -69,7 +69,7 @@
           {{ entry.description }}
         </div>
         <div class="col-sm-400 floatRight">
-          <input type="radio" name="selectRetailer" [checked]="idx === 0" 
+          <input type="radio" name="selectRetailer"  [(ngModel)]="checked"
             [value]="entry.id" 
             (change)="onSelectionChange(entry)"/>
         </div>

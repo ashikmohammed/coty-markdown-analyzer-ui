@@ -75,13 +75,13 @@
                 <td>{{emp.UPC}}</td>
 				<td>{{emp.Desc}}</td>
 				<td >
-				<select id="PTOtype" class="option"  (change)="priorityChange($event);">
-                   <option class="option" *ngFor="let prior of emp.Priority;let i=idx" [value]="prior.key">{{prior.value}}</option>
+				<select id="PTOtype" class="option" #pttype (change)="priorityChange($event);">
+                   <option class="option" *ngFor="let prior of emp.Priority;let i=idx" [value]="prior.key" [selected]="emp.selectedPriority == prior.value">{{prior.value}}</option>
                 </select>
 				</td>
 				<td >
-				<select id="mustdel" class="option" (change)="mustDeleteChange($event);">
-                   <option class="option" *ngFor="let del of emp.MustDel;let i=idx" [value]="del.key">{{del.value}}</option>
+				<select id="mustdel" class="option" #mustdel (change)="mustDeleteChange($event);">
+                   <option class="option" *ngFor="let del of emp.MustDel;let i=idx" [ngValue]="prior" [selected]="emp.selectedisDelete == del.value">{{del.value}}</option>
                 </select>
 				</td>
             </tr>

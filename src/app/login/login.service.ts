@@ -20,7 +20,17 @@ export class LoginService {
   getLogin(url, userName: string, password: string): Observable<any> {
 
     let payLoad = {"userName": userName, "password":password};
-
+	
+	let applicationPayload = {
+            "listOfUniqueUpcs":[],
+            "retailerName":"",
+			"retailerId":"",
+            "markdownType":"",
+			"markdownTypeId":"",
+			"uniqueUpclistforUI":[]};
+			
+    this.setSessionPayloadData(applicationPayload);
+			
     let options = new RequestOptions({
       headers: new Headers({
         'Content-Type': 'application/json',
@@ -56,6 +66,18 @@ export class LoginService {
   resetSession = function()
   {
 	   this.sessionStorage.clear('sessionID');
+  }
+  setSessionPayloadData = function(payloadData)
+  {
+	this.sessionStorage.store("SessionPayload", payloadData);  
+  }
+  getSessionPayloadData = function()
+  {
+	  return this.sessionStorage.retrieve('SessionPayload');  
+  }
+  resetSessionPayloadData = function()
+  {
+	   this.sessionStorage.clear('SessionPayload');
   }
 }
 

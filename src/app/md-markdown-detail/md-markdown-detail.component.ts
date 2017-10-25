@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-md-markdown-detail',
@@ -8,9 +9,10 @@ import { Router } from '@angular/router';
 })
 export class MdMarkdownDetailComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private loginService: LoginService) { }
 
   ngOnInit() {
+	   
   }
 
   previous (){
