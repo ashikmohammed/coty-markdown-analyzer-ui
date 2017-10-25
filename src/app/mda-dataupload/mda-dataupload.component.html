@@ -1,42 +1,111 @@
 <app-header></app-header>
-<app-nav></app-nav>
-<div class="MDcontainer">
-  <div class="title">Upload RAW Data Template </div>
+
+<section class="main-body">
+    <div class="container-fluid whatYouNeedContainer">
+        <div class="row">
+            <h2>MARKDOWN CALCULATOR STEPS</h2>
+            <div class="stepwizard">
+                <div class="stepwizard-row">
+                    <div class="stepwizard-step step-completed" style="text-align:left;">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/MdWhatYouNeed']"></button>
+                        <p>What You Need</p>
+                    </div>
+                    <div class="stepwizard-step step-completed" style="width:83px;">
+                        <button type="button" class="btn btn-default btn-circle  btn-active" [routerLink]="['/MdSelectRetailer']"></button>
+                        <p>&nbsp;&nbsp;Retailer</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/mdaDataUpload']"></button>
+                        <p>Raw Data </p>
+                    </div>
+					<div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" [routerLink]="['/mdaStoreRankingUpload']" disabled="disabled"></button>
+                        <p>&nbsp;&nbsp;Store Ranking </p>
+                    </div>
+					<div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>&nbsp;&nbsp;Set Priority</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" ></button>
+                        <p>Retail or Cost </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p> Inventory Summary</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>How Many Waves </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Wave Details</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Markdown Summary </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Innovation Details </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Innovation Summary </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div class="row">
+		<div class="MDcontainer">
+
+		<div class="title">Upload RAW Data Template </div>
   <div class="sub-title">Upload the template with the UPCs of the products on which markdown analysis need to be done.</div>
+  <div class="row tempatePaddingDownload">
+    <div class="col-lg-4 col-xs-12 col-sm-4">
+    </div>
+    <div class="row col-lg-6 col-xs-12 col-sm-4">
+      <div class=" col-lg-1 questionMarkWhite" tooltip="Download RAW Data Template."></div>
+      <a href="../../assets/docs/Raw Data Template.xlsx" download="Raw Data Template.xlsx">
 
-  
-<div class="row tempatePaddingDownload">
-  <div class="col-lg-4 col-xs-12 col-sm-4">
-  </div>
-  <div class="row col-lg-6 col-xs-12 col-sm-4">
-  <div class=" col-lg-1 questionMarkGrey" tooltip="Download RAW Data Template."></div>
-<a href="../../assets/docs/Raw Data Template.xlsx" download="Raw Data Template.xlsx">
-
-<button class="col-lg-5 button_Download">Download RAW Data Template<i class="fa fa-download pull-right" aria-hidden="true"></i></button>
-</a>
-  </div>
-  <div class="col-lg-2 col-xs-12 col-sm-4">
-  </div>
+        <button class="col-lg-5 button_Download">Download RAW Data Template
+          <i class="fa fa-download pull-right" aria-hidden="true"></i>
+        </button>
+      </a>
+    </div>
+    <div class="col-lg-2 col-xs-12 col-sm-4">
+    </div>
   </div>
   <div class="row tempatePaddingUpload wrapper">
-  <div>
-  Upload Raw Data Excel
+    <div>
+      Upload Raw Data Excel
+    </div>
   </div>
+  <div class=" row tempatePaddingUpload wrapper">
+    <div class="col-lg-4 col-xs-12 col-sm-4">
+    </div>
+    <div class="row col-lg-6 col-xs-12 col-sm-4">
+      <div class="questionMarkWhite col-lg-1" tooltip="Upload Raw Data Excel."></div>
+      <button class="button_Upload col-lg-11">
+        <div [hidden]="showIcon">
+          <i class="fa fa-check-circle pull-left"></i>
+        </div>
+        <input type="file" id="fileInput" #fileInput name="file" accept=".xlsx" (change)="change($event)" />{{uploadText}}
+        <i class="fa fa-upload pull-right" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="col-lg-2 col-xs-12 col-sm-4">
+    </div>
   </div>
-    <div class=" row tempatePaddingUpload wrapper">
-  <div class="col-lg-4 col-xs-12 col-sm-4">
+		</div>
+    </div>
   </div>
-  <div class="row col-lg-6 col-xs-12 col-sm-4">
-  <div class="questionMarkGrey col-lg-1" tooltip="Upload Raw Data Excel." ></div>
-  <button class="button_Upload col-lg-11"><div [hidden]="showIcon"><i class="fa fa-check-circle pull-left" ></i></div><input type="file" id="fileInput" #fileInput name="file" accept=".xlsx" (change)="change($event)"/>{{uploadText}}<i class="fa fa-upload pull-right" aria-hidden="true"></i></button>
+</section>
+
+<footer class="footer-fixed">
+  <div class="row wrapper">
+    <button type="button" class="btn btn-primary" (click)="previous();" tooltip="previus"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp; Previous</button>
+    <button type="button" class="btn btn-primary" (click)="uploadRawDataTemplate();" tooltip="Save & Continue">Save & Continue&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></button>
   </div>
-  <div class="col-lg-2 col-xs-12 col-sm-4">
-  </div>
-  </div>
-</div>
- <footer >
- <div class="row wrapper" >
-  <button type="button" class= "btn btn-primary btn-default" (click)="previous();"tooltip="previus">Previous</button>
-   <button type="button" class= "btn btn-primary btn-default"(click)="uploadRawDataTemplate();"tooltip="Save & Continue">Save & Continue</button>
-</div>
- </footer>
+</footer>

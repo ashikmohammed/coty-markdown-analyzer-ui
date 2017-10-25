@@ -1,0 +1,28 @@
+.MDcontainer {
+    height: 700px; 
+}
+
+
+.startBtn {
+    margin: 0 auto;
+    color: #ffffff;
+    background-color: #4d1c8a;
+    padding: 10px 30px;
+}
+
+.MDcontainer input {
+    width: 100px;
+    border-radius: 20px;
+    color: #000000;
+    border: 0px;
+    padding: 3px;
+}
+
+
+.MDcontainer .row div:nth-child(2) {
+    color: #c3b8d1;
+}
+
+.padBottom20px {
+    padding-bottom: 20px;
+}

@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/* Carousel */
+.landingCarousel .item{
+	
+
+}
+.bg1 {
+	background: url("./assets/images/homeBg.png") no-repeat;
+	min-width:100%;
+	min-height:337px;
+}
+.landingCarousel .carousel-caption {
+	position: relative;
+    left: 23%;
+    top: 7px;
+    text-align: left;
+    padding-top: 0;
+}
+.landingCarousel .carousel-caption h2{
+	font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
+.landingCarousel .carousel-caption p{
+	font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 18px;
+}
+.landingCarousel .carousel-caption button{
+	border: solid 1px #4C1D82;
+    border-radius: 25px;
+    min-width: 160px;
+    min-height: 44px;
+    color: #4C1D82;
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 20px;
+}
+.landingCarousel .captionRight {
+	float:right;
+	background-color: rgba(29, 23, 33, 0.8);	
+	min-height: 337px;
+	    min-width: 20%;
+}
+
+.landingCarousel .captionRight ul{
+	list-style:none;
+	padding: 0;
+	font-size: 16px;
+	color:#ededed;
+}
+.landingCarousel .captionRight ul li{
+	padding: 16px 8px 16px 5px;
+	border-bottom:solid 1px #7c7980;
+}
+.landingCarousel .captionRight .carousel-caption {
+	left:0;
+	top: 16px;
+    padding-bottom: 0;
+}
+.landingCarousel .captionRight ul li a.more{
+	color:#3295da;
+	font-weight:bold;
+}
+.landingContainer .carousel-indicators {
+    width: auto;
+    right: 24%;
+	left: auto;
+}
+
+.landingContainer .carousel-indicators li, .landingContainer .carousel-indicators li.active{
+	width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+/*Landing Content */
+.landingContent {
+	margin: 24px 10% 0 10%;	
+	font-size:14px;
+}
+
+.landingContent h2{
+	font-size:22px;
+	font-weight:bold;
+	margin-bottom: 16px;
+}
+.landingContent .news p{
+	border-bottom: solid 1px #a5a6a7;
+	padding-bottom:10px;
+		
+}
+.byName {
+	display:block;	
+}
+.byName a{
+	color:#2388c8;	
+}

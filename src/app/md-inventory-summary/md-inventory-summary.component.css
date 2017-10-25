@@ -1,15 +1,11 @@
-.MDcontainer {
-    background-color: #4d1c8a; 
-    height: 500px; 
-    color: #ffffff;
+.MDcontainer{
+    height: 700px;
+}
+.subTitle {
+    font-size: 20px;
+    padding: 10px 0px;
 }
 
-.questionMarkWhite {
-    background: url("../../assets/images/questionMarkWhite.png") no-repeat;
-    width: 33px;
-    height: 28px;
-    margin: 0 auto;
-}
 
 .startBtn {
     margin: 0 auto;
@@ -26,14 +22,7 @@
     padding: 3px;
 }
 
-.sub-title {
-    font-size: 25px;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 50px;
-}
-
-.MDcontainer .row div:nth-child(2) {
+.MDcontainer .row div:nth-child(2), .MDcontainer .row div:nth-child(3) {
     color: #c3b8d1;
 }
 

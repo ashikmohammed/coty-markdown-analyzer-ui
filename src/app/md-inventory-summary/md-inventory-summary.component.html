@@ -1,135 +1,312 @@
 <app-header></app-header>
-<app-nav></app-nav>
 
+<section class="main-body">
+    <div class="container-fluid whatYouNeedContainer">
+            <div class="row">
+            <h2>MARKDOWN CALCULATOR STEPS</h2>
+            <div class="stepwizard">
+                <div class="stepwizard-row">
+                    <div class="stepwizard-step step-completed" style="text-align:left;">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/MdWhatYouNeed']"></button>
+                        <p>What You Need</p>
+                    </div>
+                    <div class="stepwizard-step step-completed" style="width:83px;">
+                        <button type="button" class="btn btn-default btn-circle  btn-active" [routerLink]="['/MdSelectRetailer']"></button>
+                        <p>&nbsp;&nbsp;Retailer</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/mdaDataUpload']"></button>
+                        <p>&nbsp;&nbsp;Raw Data</p>
+                    </div>
+					<div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/mdaStoreRankingUpload']"></button>
+                        <p>&nbsp;&nbsp;Store Ranking</p>
+                    </div>
+					<div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/MdPrioritizeupcdelete']"></button>
+                        <p>&nbsp;&nbsp;Set Priority</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active" [routerLink]="['/MdChooseRetailer']" ></button>
+                        <p>Retail or Cost </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle btn-active"></button>
+                        <p> Inventory Summary</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>How Many Waves </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Wave Details</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Markdown Summary </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Innovation Details </p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <button type="button" class="btn btn-default btn-circle" disabled="disabled"></button>
+                        <p>Innovation Summary </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="no-gutters MDcontainer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="title">Inventory Summary</div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Gross Retail Inventory In $
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" [value] = "cdMsg"  />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Total Store Count
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Unit Cost Price
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Unit Retail Price
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Average number of weeks on hand
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="title">Markdown Summary</div>
+                <div class="subTitle">
+                    TopLine STRATEGY
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        WAVE 1 total $
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        WAVE 2 total $
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        RESIDUAL INV $ VALUE
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled/>
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        DISPOSAL FEE TOTAL
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled/>
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        TOTAL COTY MD LIABILITY
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled/>
+                    </div>
+                </div>
+                <div class="subTitle">
+                    SUSTAINABLE GROWTH STRATEGY
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        WAVE 1 total $
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        WAVE 2 total $
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        RESIDUAL INV $ VALUE
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled/>
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        DISPOSAL FEE TOTAL
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        TOTAL COTY MD LIABILITY
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="title">Innovation Summary</div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Customer GMROII YR1
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Sales Forecast for YR1
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Sales Forecast for YR2
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Sales Forecast for YR3
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
+                <div class="row padBottom20px">
+                    <div class="floatLeft">
+                        <div class="questionMarkWhite"></div>
+                    </div>
+                    <div class="floatLeft">
+                        Net POD Change
+                    </div>
+                    <div class="col-sm-4 floatRight">
+                        <input type="text" disabled />
+                    </div>
+                </div>
 
-<div class="row no-gutters MDcontainer">
-<div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="sub-title">Inventory Summary</div>
-            <div class="row padBottom20px">
-                <div class="floatLeft">
-                    <div class="questionMarkWhite"></div>
-                </div>
-                <div class="floatLeft">
-                    Gross Retail Inventory In $
-                </div>
-                <div class="col-sm-4 floatRight">       
-                    <input type="text" />
-                </div>
-            </div>
-            <div class="row padBottom20px">
-              <div class="floatLeft">
-                  <div class="questionMarkWhite"></div>
-              </div>
-              <div class="floatLeft">
-                  Total Store Count
-              </div>
-              <div class="col-sm-4 floatRight">       
-                  <input type="text" />
-              </div>
-          </div>
-          <div class="row padBottom20px">
-            <div class="floatLeft">
-                <div class="questionMarkWhite"></div>
-            </div>
-            <div class="floatLeft">
-                Unit Cost Price
-            </div>
-            <div class="col-sm-4 floatRight">       
-                <input type="text" />
             </div>
         </div>
-        <div class="row padBottom20px">
-          <div class="floatLeft">
-              <div class="questionMarkWhite"></div>
-          </div>
-          <div class="floatLeft">
-              Unit Retail Price
-          </div>
-          <div class="col-sm-4 floatRight">       
-              <input type="text" />
-          </div>
-        </div>
-        <div class="row padBottom20px">
-          <div class="floatLeft">
-              <div class="questionMarkWhite"></div>
-          </div>
-          <div class="floatLeft">
-             Average number of weeks on hand
-          </div>
-          <div class="col-sm-4 floatRight">       
-              <input type="text" />
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="sub-title">Markdown Summary</div>
-            <div class="row padBottom20px">
-                <div class="floatLeft">
-                    <div class="questionMarkWhite"></div>
-                </div>
-                <div class="floatLeft">
-                    Total Liabilithy Cost to Coty
-                </div>
-                <div class="col-sm-4 floatRight">       
-                    <input type="text" />
-                </div>
-            </div>
-            <div class="row padBottom20px">
-              <div class="floatLeft">
-                  <div class="questionMarkWhite"></div>
-              </div>
-              <div class="floatLeft">
-                  Remaining Inventory on Hand
-              </div>
-              <div class="col-sm-4 floatRight">       
-                  <input type="text" />
-              </div>
-          </div>
-          <div class="row padBottom20px">
-            <div class="floatLeft">
-                <div class="questionMarkWhite"></div>
-            </div>
-            <div class="floatLeft">
-                Total Store Count is listed in $s
-            </div>
-            <div class="col-sm-4 floatRight">       
-                <input type="text" />
-            </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="sub-title">Innovation Summary</div>
-            <div class="row padBottom20px">
-                <div class="floatLeft">
-                    <div class="questionMarkWhite"></div>
-                </div>
-                <div class="floatLeft">
-                    ROI
-                </div>
-                <div class="col-sm-4 floatRight">       
-                    <input type="text" />
-                </div>
-            </div>
-            <div class="row padBottom20px">
-              <div class="floatLeft">
-                  <div class="questionMarkWhite"></div>
-              </div>
-              <div class="floatLeft">
-                  Sales Forecast for each year for the next 3 years:
-              </div>
-              <div class="col-sm-4 floatRight">       
-                  <input type="text" />
-              </div>
-          </div>
-          
-      </div>
     </div>
-  </div>
 </div>
-
-
-
-
-
+    <!--div>
+        <a class="button startBtn" [routerLink]="['/MdHowManyWaves']">Start</a>
+    </div-->
+</div>
+<footer class="footer-fixed">
+    <div class="row wrapper">
+        <button type="button" class="btn btn-primary" (click)="previous();" tooltip="previus"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp; Previous</button>
+        <button type="button" class="btn btn-primary" (click)="next();" tooltip="Save & Continue">Save & Continue&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i>
+</button>
+    </div>
+</footer>

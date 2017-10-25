@@ -1,35 +1,24 @@
-### STAGE 1: Build ###
+FROM alpine:latest
+MAINTAINER sarishinohara
 
-# We label our stage as 'builder'
-FROM node:8-alpine as builder
+# update alpine linux
+RUN apk update && apk upgrade && \ 
+    apk add nodejs && \
+    # may comment this line in my computer.
+    apk add nodejs-npm && \
+    npm install -g @angular/cli@1.1.0-rc.2
 
+# add source code to images
+ADD . /coty-markdown-analyzer-ui
 
+# switch working directory
+WORKDIR /coty-markdown-analyzer-ui
 
+# install dependencies
+RUN npm install
 
-RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
+# expose port 4200
+EXPOSE 4200 
 
-## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
-RUN npm i && mkdir /ng-app && cp -R ./node_modules ./ng-app
-
-WORKDIR /ng-app
-
-COPY . .
-
-## Build the angular app in production mode and store the artifacts in dist folder
-RUN $(npm bin)/ng build --prod --build-optimizer
-
-
-### STAGE 2: Setup ###
-
-FROM nginx:1.13.3-alpine
-
-## Copy our default nginx config
-COPY nginx/default.conf /etc/nginx/conf.d/
-
-## Remove default nginx website
-RUN rm -rf /usr/share/nginx/html/*
-
-## From 'builder' stage copy over the artifacts in dist folder to default nginx public folder
-COPY --from=builder /ng-app/dist /usr/share/nginx/html
-
-CMD ["nginx", "-g", "daemon off;"]
+# run ng serve on localhost
+CMD ["ng","serve", "--host", "0.0.0.0", "--disable-host-check"] 

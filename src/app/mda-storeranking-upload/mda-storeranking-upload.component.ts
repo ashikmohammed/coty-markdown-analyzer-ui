@@ -1,8 +1,9 @@
 import { ViewChild,Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login/login.service';
 import { Http, RequestOptions,Response, RequestMethod, Headers, URLSearchParams } from '@angular/http';
 //import { MdaDatauploadService } from './mda-dataupload.service'
-const URL = 'http://localhost:3000';
+const URL = 'http://localhost:8080/upload/storeranking';
 
 
 @Component({
@@ -15,16 +16,20 @@ export class MdaStorerankingUploadComponent implements OnInit {
    @ViewChild('fileInput') fileInput;
    uploadText ="Upload Store Ranking Excel"; 
 	showIcon = true;
-  constructor(private router: Router,private http: Http) { }
+	sessionPayload = {};
+	sessionId;
+  constructor(private router: Router,private http: Http, private loginService: LoginService) { }
    
   ngOnInit() {
-	
+	this.sessionPayload = this.loginService.getSessionPayloadData();
+	this.sessionId = this.loginService.getSession();
   }
   
-  previous = function()
+  previous () 
   {     
 	  this.router.navigate(['/mdaDataUpload']);
   }
+
   
   change = function(event)
   {
@@ -40,15 +45,16 @@ export class MdaStorerankingUploadComponent implements OnInit {
         let formData = new FormData();
         if (fileCount > 0) { // a file was selected
             for (let i = 0; i < fileCount; i++) {
-                formData.append('file', inputEl.files.item(i));
+                formData.append('uploadfile', inputEl.files.item(i));
             }
+                formData.append('sessionId', this.sessionId);
             this.http
                 .post(URL, formData).map((res:any) => res).subscribe(
                     (success) => {
-                     alert(success._body);
-					 this.router.navigate(['/mdaPrioritizeDelete']);
+                    console.log(success._body);
+					 this.router.navigate(['/MdPrioritizeupcdelete']);
                   },
-                    (error) => alert(error)
+                  (error) => alert(error)
                 );
 
         }

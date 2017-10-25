@@ -12,24 +12,6 @@
 # limitations under the License.
 #
 # [START runtime]
-runtime: nodejs
+runtime: custom
 env: flex
-env_variables:
-  API_KEY: 659d5cf14ada32666967e6e1250dc0fa5b8c1ea0
-manual_scaling:
-  instances: 1
-resources:
-  cpu: 1
-  memory_gb: 0.6
-  disk_size_gb: 10
-
-#network:
-  #instance_tag: TAG_NAME
-  #name: NETWORK_NAME
-  #subnetwork_name: SUBNETWORK_NAME
-  #forwarded_ports:
-   # - PORT
-    #- HOST_PORT:CONTAINER_PORT
-    #- PORT/tcp
-    #- HOST_PORT:CONTAINER_PORT/udp
 # [END runtime]

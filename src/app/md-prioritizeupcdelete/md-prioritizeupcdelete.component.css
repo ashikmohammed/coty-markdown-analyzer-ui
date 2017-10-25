@@ -1,0 +1,49 @@
+.MDcontainer {
+    background-color: #4c1d82; 
+    height: 590px; 
+    color: #ffffff;
+}
+.title {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+.sub-title {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.btn-default{
+border-radius: 10px;
+}
+.wrapper {
+    text-align: center;
+}
+
+.option{
+	 background-color: #ffffff;
+    border: 1px solid #4c1d82;
+    color: #4c1d82;
+	border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+	width:150px;
+	height:25px;
+}
+.tablescroll
+{
+	max-height: 450px; 
+	overflow: scroll;
+}
+.tableHeader
+{
+	background-color: #ffffff;
+    border: 1px solid #4c1d82;
+    color: #4c1d82;
+	font-size: 18px;
+}
+

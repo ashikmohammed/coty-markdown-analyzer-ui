@@ -1,0 +1,40 @@
+.MDcontainer ul li {
+    text-align: center;
+    font-size: 18px;
+    padding: 0px 10px;
+    padding-top: 15px;
+    height: 51px;
+    border-bottom: 1px solid #C89DFD;
+}
+
+.MDcontainer ul li div:nth-child(2) {
+    font-size: 20px;
+    padding: 0px 20px;
+}
+
+
+.startBtn {
+    margin: 0 auto;
+    color: #ffffff;
+    background-color: #4d1c8a;
+    padding: 10px 30px;
+}
+
+.MDcontainer ul {
+    background-color: #ffffff;
+    color: #4d1c8a;
+    width: 45%;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 230px;
+    padding: 0px 35px;
+}
+
+header,
+.tooltip,
+.tooltip p {
+  margin: 4em 0;
+  text-align: center;
+}
+

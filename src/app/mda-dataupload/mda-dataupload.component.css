@@ -1,22 +1,12 @@
 .MDcontainer {
-    background-color: #4d1c8a; 
-    height: 500px; 
+    background-color: #4c1d82; 
+    height: 310px; 
     color: #ffffff;
-}
-.title {
-    text-align: center;
-    font-size: 30px;
-    padding-top: 70px;
-}
-.sub-title {
-    text-align: center;
-    font-size: 12px;
-    margin-top: 20px;
 }
 .button_Download{
     background-color: #ffffff;
-    border: 1px solid #4d1c8a;
-    color: #4d1c8a;
+    border: 1px solid #4c1d82;
+    color: #4c1d82;
 	border-radius: 25px;
     text-align: center;
     text-decoration: none;
@@ -28,7 +18,7 @@
 	margin: 0 auto;
 }
 .button_Upload{
-    background-color: #4d1c8a;
+    background-color: #4c1d82;
     border: 1px solid #ffffff;
     color: #ffffff;
 	border-radius: 25px;
@@ -40,25 +30,11 @@
 	width:400px;
 	height:50px;
 }
-
-.questionMarkGrey {
-    background: url("../../assets/images/questionMarkWhite.png") no-repeat;
-    width: 33px;
-    height: 30px;
-    margin-top: 12px;	
-}
-
-.backbutton{
-	background: url("../../assets/images/Back-button.png") no-repeat;
-    width: 125px;
-    height: 33px;
-	margin: 0 auto;
-}
 .tempatePaddingDownload{
-	margin-top: 60px;	
+	margin-top: 50px;	
 }
 .tempatePaddingUpload{
-	margin-top: 15px;	
+	margin-top: 10px;	
 }
 .btn-default{
 border-radius: 10px;
@@ -79,4 +55,6 @@ border-radius: 10px;
     outline: none;
     cursor: inherit;
 }
+
+
 
